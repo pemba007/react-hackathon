@@ -5,14 +5,15 @@ import reportWebVitals from "./reportWebVitals";
 
 import { RouterProvider } from "react-router-dom";
 
+import TestContext from "./context/testContext";
 import router from "./router";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
-    {/* <App />
-    </RouterProvider> */}
+    <TestContext.Provider value='DANBN'>
+      <RouterProvider router={router} />
+    </TestContext.Provider>
   </React.StrictMode>
 );
 
